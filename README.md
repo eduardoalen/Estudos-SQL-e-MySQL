@@ -1,1 +1,1 @@
-# Estudos-SQL-e-MySQL
+# Minhas anotações de estudos da linguagem SQL, utilizando o sistema de gerenciamento de banco de dados MySQL
