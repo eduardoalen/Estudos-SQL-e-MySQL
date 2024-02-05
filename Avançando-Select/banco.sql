@@ -42,3 +42,8 @@ SELECT salary FROM salaries;
 SELECT AVG(salary) FROM salaries;
 
 SELECT AVG(salary) AS media FROM salaries WHERE salary > 100000;
+
+
+SELECT SUM(salary) FROM salaries;
+
+SELECT SUM(salary) AS soma_salario FROM salaries WHERE salary > 100000;
