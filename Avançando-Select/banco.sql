@@ -28,3 +28,11 @@ SELECT * FROM employees WHERE gender = "F" ORDER BY hire_date DESC LIMIT 5;
 SELECT * FROM departments ORDER BY dept_name ASC LIMIT 5;
 
 SELECT * FROM titles ORDER BY title ASC LIMIT 5;
+
+SELECT MIN(salary) AS maior_salario FROM salaries;
+
+SELECT MAX(salary) AS maior_salario FROM salaries;
+
+SELECT COUNT(*) AS qtd_salarios FROM salaries WHERE salary > 100000;
+
+SELECT COUNT(*) AS num_dept FROM employees.departments;
