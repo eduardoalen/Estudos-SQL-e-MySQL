@@ -36,3 +36,9 @@ SELECT MAX(salary) AS maior_salario FROM salaries;
 SELECT COUNT(*) AS qtd_salarios FROM salaries WHERE salary > 100000;
 
 SELECT COUNT(*) AS num_dept FROM employees.departments;
+
+SELECT salary FROM salaries;
+
+SELECT AVG(salary) FROM salaries;
+
+SELECT AVG(salary) AS media FROM salaries WHERE salary > 100000;
