@@ -62,3 +62,15 @@ USE employees;
 SELECT * FROM titles;
 
 SELECT * FROM titles WHERE title LIKE "%Engineer%";
+
+
+SELECT * FROM dept_emp WHERE dept_no IN ('d004', 'd005', 'd006');
+
+SELECT * FROM dept_emp WHERE dept_no IN ('d004', 'd005', 'd006') ORDER BY dept_no DESC;
+
+SELECT * FROM departments WHERE dept_name IN ('Development', 'Marketing');
+
+
+SELECT * FROM employees.employees;
+
+SELECT * FROM employees WHERE last_name IN ('Facello', 'Peac') AND gender = 'M';
