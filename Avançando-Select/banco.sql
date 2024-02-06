@@ -74,3 +74,15 @@ SELECT * FROM departments WHERE dept_name IN ('Development', 'Marketing');
 SELECT * FROM employees.employees;
 
 SELECT * FROM employees WHERE last_name IN ('Facello', 'Peac') AND gender = 'M';
+
+
+SELECT * FROM dept_emp;
+
+SELECT * FROM dept_emp WHERE dept_no BETWEEN 'd003' AND 'd005';
+
+SELECT * FROM dept_emp WHERE dept_no BETWEEN 'd003' AND 'd005' ORDER BY dept_no DESC;
+
+
+SELECT * FROM salaries;
+
+SELECT * FROM salaries WHERE salary BETWEEN '125000' AND '175000' ORDER BY salary DESC;
