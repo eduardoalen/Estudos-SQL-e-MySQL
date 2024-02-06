@@ -55,3 +55,10 @@ SELECT * FROM employees;
 SELECT * FROM employees WHERE first_name LIKE "%ber%";
 
 SELECT * FROM employees WHERE last_name LIKE "%ber" AND gender='F';
+
+
+USE employees;
+
+SELECT * FROM titles;
+
+SELECT * FROM titles WHERE title LIKE "%Engineer%";
