@@ -86,3 +86,6 @@ SELECT * FROM dept_emp WHERE dept_no BETWEEN 'd003' AND 'd005' ORDER BY dept_no 
 SELECT * FROM salaries;
 
 SELECT * FROM salaries WHERE salary BETWEEN '125000' AND '175000' ORDER BY salary DESC;
+
+
+SELECT dept_no AS "Numero da coluna", dept_name AS "Nome da Coluna" FROM departments;
