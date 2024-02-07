@@ -26,3 +26,27 @@ INSERT INTO pessoas VALUES ("Maria", 23, "maria@gmail.com");
 INSERT INTO pessoas VALUES ("Maria Clara", 23, "maria@gmail.com"); -- erro
 SELECT * FROM pessoas;
  
+
+CREATE TABLE PRODUTOS (
+	id INT NOT NULL,
+    nome VARCHAR(255),
+    sku VARCHAR(10),
+    PRIMARY KEY (id)
+);
+
+ INSERT INTO produtos VALUES (1, "Batedeira", "123ads");
+
+INSERT INTO produtos VALUES (1, "Fogão", "184jdi"); -- ERRO
+INSERT INTO produtos VALUES (NULL, "Fogão", "184jdi"); -- ERRO
+
+INSERT INTO produtos VALUES (2, "Fogão", "184jdi");
+
+
+CREATE TABLE frutas (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100)
+);
+INSERT INTO frutas (nome) VALUES ("Mamão");
+INSERT INTO frutas (nome) VALUES ("Banana");
+UPDATE frutas SET nome = "Maça" WHERE id = 3;
+SELECT * FROM frutas;
