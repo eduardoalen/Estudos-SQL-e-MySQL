@@ -70,3 +70,7 @@ CREATE TABLE enderecos (
 INSERT INTO pessoas (nome, idade) VALUES ('Jorge', 35);
 
 INSERT INTO enderecos (rua, numero, pessoa_id) VALUES ("Rua teste", "123", 1);
+
+
+CREATE INDEX index_nome
+ON pessoas(nome);
