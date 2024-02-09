@@ -50,3 +50,23 @@ INSERT INTO frutas (nome) VALUES ("Mamão");
 INSERT INTO frutas (nome) VALUES ("Banana");
 UPDATE frutas SET nome = "Maça" WHERE id = 3;
 SELECT * FROM frutas;
+
+
+
+CREATE TABLE pessoas (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    idade INT
+);
+
+CREATE TABLE enderecos (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    rua VARCHAR(100),
+    numero VARCHAR(10),
+    pessoa_id INT NOT NULL,
+    FOREIGN KEY (pessoa_id) REFERENCES pessoas(id)
+);
+
+INSERT INTO pessoas (nome, idade) VALUES ('Jorge', 35);
+
+INSERT INTO enderecos (rua, numero, pessoa_id) VALUES ("Rua teste", "123", 1);
