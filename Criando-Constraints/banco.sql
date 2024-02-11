@@ -74,3 +74,36 @@ INSERT INTO enderecos (rua, numero, pessoa_id) VALUES ("Rua teste", "123", 1);
 
 CREATE INDEX index_nome
 ON pessoas(nome);
+
+DROP INDEX index_nome
+ON pessoas;
+
+
+CREATE TABLE contas (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(255),
+    sobrenome VARCHAR(255),
+    saldo INT,
+    data_nascimento DATE
+);
+
+SELECT * FROM contas;
+
+CREATE DATABASE banco;
+
+CREATE TABLE contas (
+	id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(255),
+    sobrenome VARCHAR(255),
+    saldo INT,
+    data_nascimento DATE
+);
+
+CREATE INDEX conta_index
+ON contas(saldo);
+
+INSERT INTO contas (nome, sobrenome, saldo, data_nascimento) VALUES ("Mariana", "Sousa", 2000, "1999-03-20");
+INSERT INTO contas (nome, sobrenome, saldo, data_nascimento) VALUES ("Pedro", "Pinto", 500, "2006-01-05");
+INSERT INTO contas (nome, sobrenome, saldo, data_nascimento) VALUES ("Rosana", "Melo", 7000, "1975-11-02");
+
+SELECT * FROM contas;
