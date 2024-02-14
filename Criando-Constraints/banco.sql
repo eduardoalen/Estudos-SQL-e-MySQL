@@ -107,3 +107,9 @@ INSERT INTO contas (nome, sobrenome, saldo, data_nascimento) VALUES ("Pedro", "P
 INSERT INTO contas (nome, sobrenome, saldo, data_nascimento) VALUES ("Rosana", "Melo", 7000, "1975-11-02");
 
 SELECT * FROM contas;
+
+
+-- JOIN
+SELECT employees.first_name, employees.last_name, salaries.salary 
+FROM employees INNER JOIN salaries
+ON employees.emp_no = salaries.emp_no;
