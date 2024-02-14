@@ -124,3 +124,8 @@ FROM employees INNER JOIN salaries
 ON employees.emp_no = salaries.emp_no
 WHERE salaries.salary >= 120000 
 ORDER BY salaries.salary DESC;
+
+SELECT employees.first_name AS nome, employees.gender AS genero, titles.title AS cargo
+FROM employees INNER JOIN titles
+ON employees.emp_no = titles.emp_no
+WHERE titles.title = 'Senior Engineer';
