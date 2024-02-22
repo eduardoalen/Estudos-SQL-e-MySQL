@@ -142,3 +142,13 @@ SELECT enderecos.rua, pessoas.nome
 FROM enderecos
 RIGHT JOIN pessoas
 ON pessoas.id = enderecos.pessoa_id;
+
+
+-- UTILIZAR MAIS DE DOIS JOINS
+SELECT employees.first_name, salaries.salary, titles.title
+FROM employees
+INNER JOIN salaries
+ON employees.emp_no = salaries.emp_no
+INNER JOIN titles
+ON employees.emp_no = titles.emp_no
+WHERE salaries.salary > 125000;
