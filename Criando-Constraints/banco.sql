@@ -129,3 +129,16 @@ SELECT employees.first_name AS nome, employees.gender AS genero, titles.title AS
 FROM employees INNER JOIN titles
 ON employees.emp_no = titles.emp_no
 WHERE titles.title = 'Senior Engineer';
+
+
+-- LEFT JOIN
+SELECT pessoas.nome, enderecos.rua
+FROM pessoas
+LEFT JOIN enderecos
+ON pessoas.id = enderecos.pessoa_id;
+
+-- RIGHT JOIN
+SELECT enderecos.rua, pessoas.nome
+FROM enderecos
+RIGHT JOIN pessoas
+ON pessoas.id = enderecos.pessoa_id;
