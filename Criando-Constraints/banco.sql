@@ -152,3 +152,13 @@ ON employees.emp_no = salaries.emp_no
 INNER JOIN titles
 ON employees.emp_no = titles.emp_no
 WHERE salaries.salary > 125000;
+
+-- JUNTAR 2 SELECTs EM 1 (UNION)
+SELECT dept_no FROM departments
+UNION SELECT dept_no FROM dept_emp;
+
+SELECT dept_no FROM departments;
+SELECT dept_no FROM dept_emp ORDER BY dept_no DESC;
+
+INSERT INTO departments VALUES ('d010', 'SEO');
+SELECT * FROM departments;
