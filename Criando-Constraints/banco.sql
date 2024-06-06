@@ -166,3 +166,8 @@ SELECT * FROM departments;
 -- JUNTAR 2 SELECTs EM 1 (UNION) / duplica os valores
 SELECT dept_no FROM departments
 UNION ALL SELECT dept_no FROM dept_emp;
+
+-- AGRUPAR COLUNAS E CHECAR A QUANTIDADE DELAS
+SELECT gender, COUNT(gender) AS 'Qtd por gênero'
+FROM employees
+GROUP BY gender;
