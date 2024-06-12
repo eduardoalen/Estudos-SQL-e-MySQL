@@ -171,3 +171,20 @@ UNION ALL SELECT dept_no FROM dept_emp;
 SELECT gender, COUNT(gender) AS 'Qtd por gênero'
 FROM employees
 GROUP BY gender;
+-- EXEMPLO DE GROUP BY
+SELECT hire_date AS 'Data contratação', COUNT(hire_date) AS 'Qtd de contratados'
+FROM employees
+GROUP BY hire_date
+ORDER BY COUNT(hire_date) DESC;
+
+-- UTILIZANDO HAVING
+SELECT hire_date AS 'Data contratação', COUNT(hire_date) AS 'Qtd de contratados'
+FROM employees
+GROUP BY hire_date
+HAVING COUNT(hire_date) > 100
+ORDER BY COUNT(hire_date) DESC;
+
+SELECT title, COUNT(title) AS 'titulos'
+FROM titles
+GROUP BY title
+HAVING COUNT(title) > 100000;
