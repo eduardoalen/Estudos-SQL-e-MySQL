@@ -188,3 +188,15 @@ SELECT title, COUNT(title) AS 'titulos'
 FROM titles
 GROUP BY title
 HAVING COUNT(title) > 100000;
+
+
+-- UTILIZANDO SUBQUERY
+SELECT * FROM salaries;
+
+SELECT emp_no, first_name, (
+	SELECT SUM(salary)
+    FROM salaries
+    WHERE employees.emp_no = salaries.emp_no
+) AS soma_salario
+FROM employees
+ORDER BY emp_no DESC;
