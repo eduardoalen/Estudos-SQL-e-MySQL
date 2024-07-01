@@ -200,3 +200,22 @@ SELECT emp_no, first_name, (
 ) AS soma_salario
 FROM employees
 ORDER BY emp_no DESC;
+
+
+
+-- Utilizando o EXISTS
+USE employees;
+
+SELECT emp_no, first_name, last_name, (
+	SELECT SUM(salary)
+    FROM salaries
+    WHERE employees.emp_no = salaries.emp_no
+) AS soma_salario
+FROM employees
+WHERE EXISTS (
+	SELECT salary
+    FROM salaries
+    WHERE employees.emp_no = salaries.emp_no
+    GROUP BY salary
+    HAVING SUM(salary) > 100000
+);
