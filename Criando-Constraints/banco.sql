@@ -219,3 +219,13 @@ WHERE EXISTS (
     GROUP BY salary
     HAVING SUM(salary) > 100000
 );
+
+
+-- Utilizando o ANY
+SELECT first_name
+FROM employees
+WHERE emp_no = ANY (
+	SELECT emp_no
+    FROM salaries
+    WHERE salary > 150000
+);
